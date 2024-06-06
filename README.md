@@ -24,3 +24,27 @@ We are looking forward to speak with you about your solution.
 - asynchron
 - json-verarbeiten
 - lightweight
+
+### Entscheidungen
+
+#### Programmiersprache
+
+Die Aufgabe ist in 2 Teile untergliedert. Der erste Teil beschäftigt sich mit dem Abholen der Daten. Dieser soll asynchron
+erfolgen. Anschließend sollen die Antworten zusammengefügt werden.
+
+Die ich einen lightweight Ansatz verfolge, fällt Java und Spring Boot raus, da diese mit der JVM und einem BuildTool zu aufwändig / klobig ist.
+Eine weitere Idee wäre Python. Hier haben wir mit Python 3.5 (oder 6?) async/await als natives Feature erhalten. Der Nachteil, dass die async Api
+aufwändiger zu implementieren wäre. Bleibt also noch Javascript (um im Techstack der Firma zu bleiben). 
+
+Javascript hat den Vorteil, dass wir sher komfortabel über Promises die Asynchronität verarbeiten können. Außerdem arbeitet es perfekt mit JSON zusammen.
+
+
+### Ablaufjson
+
+- Repository erstellen
+- MVP implementieren
+  - Was gebe ich zurück?
+
+### Herausforderungen
+#### Unterschiedliche Datentypen
+Wie kann ich die Requests unterscheiden?
