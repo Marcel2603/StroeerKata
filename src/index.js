@@ -6,11 +6,11 @@ function main() {
     return Promise.all([fetch1, fetch2])
         .then(responses => {
             if ("name" in responses[0]) {
-                return {name: responses[0], posts: responses[1]};
+                return {user: responses[0], comments: responses[1]};
             }
-            return {name: responses[1], posts: responses[0]};
+            return {user: responses[1], comments: responses[0]};
         });
 }
 
 main()
-    .then(response => console.log(response));
+    .then(response => console.log(JSON.stringify(response)));

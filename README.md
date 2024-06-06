@@ -5,7 +5,7 @@ Dies ist das Repository, für die Fachaufgabe von Ströer
 >"Fetch asynchronous data from an API".\
 \
 Your task is to write a script or app, which gathers data from two endpoints asynchronously, merges the responses and displays them in any way, for example as JSON response from an REST API.
-For example you could use these two endpoints:\
+For example, you could use these two endpoints:\
 \
 http://jsonplaceholder.typicode.com/users/1 to obtain a user's data\
 http://jsonplaceholder.typicode.com/posts?userId=1 to obtain all comments written by that user\
@@ -39,14 +39,29 @@ aufwändiger zu implementieren wäre. Bleibt also noch Javascript (um im Techsta
 Javascript hat den Vorteil, dass wir sher komfortabel über Promises die Asynchronität verarbeiten können. Außerdem arbeitet es perfekt mit JSON zusammen.
 
 
-### Ablaufjson
+### Ablauf
 
 - Repository erstellen
 - MVP implementieren
   - Was gebe ich zurück?
 
 ### Herausforderungen
-#### Unterschiedliche Datentypen
+#### Unterschiedliche Datentypen (done)
 Wie kann ich die Requests unterscheiden?
 -> Das eine ist ein Objekt, das andere eine Liste.\
 **Lösung:** Prüfe ob "Name" als Key im Objekt vorkommt.
+
+#### Geo-Informationen werden nicht korrekt dargestellt (done)
+
+```json
+address: {
+  street: 'Kulas Light',
+  suite: 'Apt. 556',
+  city: 'Gwenborough',
+  zipcode: '92998-3874',
+  geo: [Object]
+}
+```
+Wie man bereits sieht, existieren aktuell noch 2 Probleme.\
+Zum einen loggt das Script **nicht** im Json-Format und zum anderen wird "geo" als Object ausgegeben.\
+**Lösung:** Ausgabe der Antwort als Json-String.
