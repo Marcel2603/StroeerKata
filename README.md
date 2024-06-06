@@ -46,16 +46,21 @@ arbeitet es perfekt mit JSON zusammen.
 
 ### Ablauf
 
-- Repository erstellen
-- MVP implementieren
-  - Was gebe ich zurück?
-- Was kann ich zusätzlich dokumentieren?
-  - How-To ergänzen
+- [x] Repository erstellen
+- [x] MVP implementieren
+  - [x] Was gebe ich zurück?
+- [x] Was kann ich zusätzlich dokumentieren?
+  - [x] How-To ergänzen
 - Wie kann ich die Qualität erhöhen?
-  - formatter (prettier, markdown-lint)
-  - Hilft ein Dockercontainer?
-  - brauche ich tests?
-  - github actions?
+  - [x] formatter (prettier, markdown-lint)
+  - [x] Hilft ein Dockercontainer?
+  - brauche ich tests? --> mehrwert hier fraglich
+    - test wäre "Prüfe ob Mockresponses gemerged werden"
+  - github actions? --> mehrwert für dieses projekt nicht gegeben
+    - könnte auf formatierung prüfen
+    - ausführung von tests
+    - docker container bauen
+  - Fehlerhandling
 
 ### Herausforderungen
 
@@ -105,9 +110,9 @@ Das Skript gibt die Antwort als JSON-String auf der Konsole aus.
 #### Ausführung mittels npm
 
 ```shell
-npm test
+npm run script
 # falls nur der output des Skripts gewünscht ist
-npm -s test
+npm -s run script
 ```
 
 #### Ausführung via Docker
@@ -130,4 +135,7 @@ npm run format:javascript
 
 # format markdown
 npm run format:markdown
+
+# alles formatieren
+npm run format
 ```
