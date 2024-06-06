@@ -48,3 +48,5 @@ Javascript hat den Vorteil, dass wir sher komfortabel über Promises die Asynchr
 ### Herausforderungen
 #### Unterschiedliche Datentypen
 Wie kann ich die Requests unterscheiden?
+-> Das eine ist ein Objekt, das andere eine Liste.\
+**Lösung:** Prüfe ob "Name" als Key im Objekt vorkommt.
