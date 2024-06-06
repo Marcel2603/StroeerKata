@@ -17,7 +17,8 @@ Dies ist das Repository, für die Fachaufgabe von Ströer
 > \
 > If you find a straightforward solution for the 'problem', even better.
 > We would like to see, what you achieve within 2 hours timeboxed and how you approach the challenge.
-> If you have time left over, we are happy if you improve your solution in a direction that you think fits the challenge.
+> If you have time left over, we are happy if you improve your solution in a direction that you think fits the
+> challenge.
 > We are looking forward to speak with you about your solution.
 
 ## Überlegungen / Herangehensweise
@@ -37,9 +38,9 @@ asynchron erfolgen. Anschließend sollen die Antworten zusammengefügt werden.
 
 Die ich einen lightweight Ansatz verfolge, fällt Java und Spring Boot raus, da diese mit der JVM und einem BuildTool zu
 aufwändig / klobig ist.\
-Eine weitere Idee wäre Python. Hier haben wir mit Python 3.5 (oder 6?) async/await als natives Feature erhalten. Der
-Nachteil, dass die async Api aufwändiger zu implementieren wäre. Bleibt also noch Javascript (um im Techstack der Firma
-zu bleiben).
+Eine weitere Idee wäre Python. Hier haben wir mit Python 3.5 async/await als natives Feature erhalten. Der Nachteil
+dieser Api ist, dass diese aufwändiger zu implementieren wäre (im Vergleich zu anderen Sprachen). Bleibt also noch
+Javascript (um im Techstack der Firma zu bleiben).
 
 Javascript hat den Vorteil, dass wir sher komfortabel über Promises die Asynchronität verarbeiten können. Außerdem
 arbeitet es perfekt mit JSON zusammen.
@@ -75,11 +76,11 @@ Array ist.
 
 ```json
 address: {
-  street: 'Kulas Light',
-  suite: 'Apt. 556',
-  city: 'Gwenborough',
-  zipcode: '92998-3874',
-  geo: [Object]
+street: 'Kulas Light',
+suite: 'Apt. 556',
+city: 'Gwenborough',
+zipcode: '92998-3874',
+geo: [Object]
 }
 ```
 
