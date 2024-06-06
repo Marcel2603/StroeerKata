@@ -4,9 +4,15 @@
   "description": "Dies ist das Repository, für die Fachaufgabe von Ströer",
   "main": "index.js",
   "scripts": {
-    "test": "node src/index.js"
+    "test": "node src/index.js",
+    "format:markdown": "markdownlint --fix README.md",
+    "format:javascript": "prettier --write src/index.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "markdownlint-cli": "^0.41.0",
+    "prettier": "^3.3.1"
+  }
 }

@@ -1,16 +1,14 @@
-const BASE_URL = "http://jsonplaceholder.typicode.com"
+const BASE_URL = "http://jsonplaceholder.typicode.com";
 
 function main() {
-    let fetch1 = fetch(`${BASE_URL}/users/1`).then(res => res.json());
-    let fetch2 = fetch(`${BASE_URL}/posts?userId=1`).then(res => res.json());
-    return Promise.all([fetch1, fetch2])
-        .then(responses => {
-            if ("name" in responses[0]) {
-                return {user: responses[0], comments: responses[1]};
-            }
-            return {user: responses[1], comments: responses[0]};
-        });
+  let fetch1 = fetch(`${BASE_URL}/users/1`).then((res) => res.json());
+  let fetch2 = fetch(`${BASE_URL}/posts?userId=1`).then((res) => res.json());
+  return Promise.all([fetch1, fetch2]).then((responses) => {
+    if ("name" in responses[0]) {
+      return { user: responses[0], comments: responses[1] };
+    }
+    return { user: responses[1], comments: responses[0] };
+  });
 }
 
-main()
-    .then(response => console.log(JSON.stringify(response)));
+main().then((response) => console.log(JSON.stringify(response)));
