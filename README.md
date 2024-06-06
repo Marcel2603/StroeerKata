@@ -125,6 +125,12 @@ docker build . -t kata:1.0
 docker run kata:1.0
 ```
 
+#### Ausführung via Terminal
+
+```shell
+./src/index.js
+```
+
 ### Formatierung
 
 ```shell

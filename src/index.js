@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const BASE_URL = "http://jsonplaceholder.typicode.com";
 const USER_ID = 1;
 
