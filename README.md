@@ -60,7 +60,7 @@ arbeitet es perfekt mit JSON zusammen.
     - könnte auf formatierung prüfen
     - ausführung von tests
     - docker container bauen
-  - Fehlerhandling
+  - [x] Fehlerhandling
 
 ### Herausforderungen
 
