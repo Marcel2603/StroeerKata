@@ -89,7 +89,7 @@ Du musst folgende Tools installiert haben:
 
 - node
 - npm (optional)
- && prettier src/index.js --write
+- docker (optional)
 
 ### Ausführung
 
@@ -107,6 +107,16 @@ Das Skript gibt die Antwort als JSON-String auf der Konsole aus.
 npm test
 # falls nur der output des Skripts gewünscht ist
 npm -s test
+```
+
+#### Ausführung via Docker
+
+```shell
+# build the image
+docker build . -t kata:1.0
+
+# run the image
+docker run kata:1.0
 ```
 
 ### Formatierung
