@@ -17,7 +17,7 @@ We would like to see, what you achieve within 2 hours timeboxed and how you appr
 If you have time left over, we are happy if you improve your solution in a direction that you think fits the challenge.
 We are looking forward to speak with you about your solution. 
 
-## Überlegungen
+## Überlegungen / Herangehensweise
 
 ### Anforderungen
 
@@ -44,6 +44,13 @@ Javascript hat den Vorteil, dass wir sher komfortabel über Promises die Asynchr
 - Repository erstellen
 - MVP implementieren
   - Was gebe ich zurück?
+- Was kann ich zusätzlich dokumentieren?
+  - How-To ergänzen
+- Wie kann ich die Qualität erhöhen?
+  - formatter (prettier, markdown-lint)
+  - Hilft ein Dockercontainer?
+  - brauche ich tests?
+  - github actions?
 
 ### Herausforderungen
 #### Unterschiedliche Datentypen (done)
@@ -65,3 +72,26 @@ address: {
 Wie man bereits sieht, existieren aktuell noch 2 Probleme.\
 Zum einen loggt das Script **nicht** im Json-Format und zum anderen wird "geo" als Object ausgegeben.\
 **Lösung:** Ausgabe der Antwort als Json-String.
+
+## How To
+
+### Voraussetzungen
+
+Du musst folgende Tools installiert haben:
+- node
+- npm (optional)
+
+### Ausführung
+
+#### Ausführung mittels Node
+```shell
+node src/index.js
+```
+Das Skript gibt die Antwort als JSON-String auf der Konsole aus.
+
+#### Ausführung mittels npm
+```shell
+npm test
+# falls nur der output des Skripts gewünscht ist
+npm -s test
+```
