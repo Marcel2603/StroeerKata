@@ -63,7 +63,8 @@ arbeitet es perfekt mit JSON zusammen.
 
 Wie kann ich die Requests unterscheiden?
 -> Das eine ist ein Objekt, das andere eine Liste.\
-**Lösung:** Prüfe ob "Name" als Key im Objekt vorkommt.
+**Lösung:** ~~Prüfe ob "Name" als Key im Objekt vorkommt.~~ Mittels `Array.isArray` prüfen, ob die erste Antwort ein
+Array ist.
 
 #### Geo-Informationen werden nicht korrekt dargestellt (done)
 
