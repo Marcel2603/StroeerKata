@@ -1,0 +1,12 @@
+{
+  "name": "stroeerkata",
+  "version": "1.0.0",
+  "description": "Dies ist das Repository, für die Fachaufgabe von Ströer",
+  "main": "index.js",
+  "scripts": {
+    "test": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
