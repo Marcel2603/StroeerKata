@@ -1,22 +1,25 @@
-# JavascriptLösung
+# Javascript
+
+Javascript hat den Vorteil, dass wir sehr komfortabel über Promises die Asynchronität verarbeiten können. Außerdem
+arbeitet es perfekt mit JSON zusammen.
 
 ## Ablauf
 
 - [x] Repository erstellen
 - [x] MVP implementieren
-    - [x] Was gebe ich zurück?
+  - [x] Was gebe ich zurück?
 - [x] Was kann ich zusätzlich dokumentieren?
-    - [x] How-To ergänzen
+  - [x] How-To ergänzen
 - Wie kann ich die Qualität erhöhen?
-    - [x] formatter (prettier, markdown-lint)
-    - [x] Hilft ein Dockercontainer?
-    - brauche ich tests? --> mehrwert hier fraglich
-        - test wäre "Prüfe ob Mockresponses gemerged werden"
-    - github actions? --> mehrwert für dieses projekt nicht gegeben
-        - könnte auf formatierung prüfen
-        - ausführung von tests
-        - docker container bauen
-    - [x] Fehlerhandling
+  - [x] formatter (prettier, markdown-lint)
+  - [x] Hilft ein Dockercontainer?
+  - brauche ich tests? --> mehrwert hier fraglich
+    - test wäre "Prüfe ob Mockresponses gemerged werden"
+  - github actions? --> mehrwert für dieses projekt nicht gegeben
+    - könnte auf formatierung prüfen
+    - ausführung von tests
+    - docker container bauen
+  - [x] Fehlerhandling
 
 ## Herausforderungen
 

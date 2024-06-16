@@ -33,14 +33,5 @@ Dies ist das Repository, für die Fachaufgabe von Ströer
 
 #### Programmiersprache
 
-Die Aufgabe ist in 2 Teile untergliedert. Der erste Teil beschäftigt sich mit dem Abholen der Daten. Dieser soll
-asynchron erfolgen. Anschließend sollen die Antworten zusammengefügt werden.
-
-Die ich einen lightweight Ansatz verfolge, fällt Java und Spring Boot raus, da diese mit der JVM und einem BuildTool zu
-aufwändig / klobig ist.\
-Eine weitere Idee wäre Python. Hier haben wir mit Python 3.5 async/await als natives Feature erhalten. Der Nachteil
-dieser Api ist, dass diese aufwändiger zu implementieren wäre (im Vergleich zu anderen Sprachen). Bleibt also noch
-Javascript (um im Techstack der Firma zu bleiben).
-
-Javascript hat den Vorteil, dass wir sher komfortabel über Promises die Asynchronität verarbeiten können. Außerdem
-arbeitet es perfekt mit JSON zusammen.
+[Java](./java/README.md)\
+[JavaScript](./javascript/README.md)
