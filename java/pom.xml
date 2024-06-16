@@ -14,6 +14,11 @@
 	<name>StroeerKata</name>
 	<properties>
 		<java.version>21</java.version>
+
+		<openapi-generator-maven-plugin.version>7.5.0</openapi-generator-maven-plugin.version>
+		<jackson-databind-nullable.version>0.2.6</jackson-databind-nullable.version>
+		<springdoc-openapi-common.version>1.8.0</springdoc-openapi-common.version>
+		<mapstruct-processor.version>1.5.5.Final</mapstruct-processor.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -26,6 +31,23 @@
 			<artifactId>spring-webflux</artifactId>
 		</dependency>
 
+
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-common</artifactId>
+			<version>${springdoc-openapi-common.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openapitools</groupId>
+			<artifactId>jackson-databind-nullable</artifactId>
+			<version>${jackson-databind-nullable.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>${mapstruct-processor.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -36,8 +58,54 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.mapstruct</groupId>
+							<artifactId>mapstruct-processor</artifactId>
+							<version>${mapstruct-processor.version}</version>
+						</path>
+					</annotationProcessorPaths>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.openapitools</groupId>
+				<artifactId>openapi-generator-maven-plugin</artifactId>
+				<version>${openapi-generator-maven-plugin.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<inputSpec>${project.basedir}/api.yaml</inputSpec>
+							<output>${project.basedir}/target/generated-sources</output>
+							<generatorName>spring</generatorName>
+							<configOptions>
+								<library>spring-boot</library>
+								<oas3>true</oas3>
+								<useSpringfox>false</useSpringfox>
+								<useSpringBoot3>true</useSpringBoot3>
+								<dateLibrary>java8</dateLibrary>
+								<reactive>false</reactive>
+								<useTags>true</useTags>
+								<serializableModel>true</serializableModel>
+								<interfaceOnly>true</interfaceOnly>
+								<apiPackage>de.herhold.stroeerkata.api.handler</apiPackage>
+								<modelPackage>de.herhold.stroeerkata.api.model</modelPackage>
+							</configOptions>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
