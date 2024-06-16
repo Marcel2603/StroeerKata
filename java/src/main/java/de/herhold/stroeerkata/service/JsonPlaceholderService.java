@@ -14,16 +14,16 @@ public class JsonPlaceholderService {
     private static final String BASE_URL = "http://jsonplaceholder.typicode.com";
     private final WebClient jsonPlaceholderClient = WebClient.builder().baseUrl(BASE_URL).build();
 
-    public Mono<User> retrieveUser() {
+    public Mono<User> retrieveUser(Integer id) {
         return jsonPlaceholderClient.get()
-                .uri("/users/1")
+                .uri("/users/{id}", id)
                 .retrieve()
                 .bodyToMono(User.class);
     }
 
-    public Mono<List<Post>> retrievePostsForUser() {
+    public Mono<List<Post>> retrievePostsForUser(Integer id) {
         return jsonPlaceholderClient.get()
-                .uri("/posts?userId=1")
+                .uri("/posts?userId={id}", id)
                 .retrieve()
                 .bodyToMono(new ParameterizedTypeReference<>() {
                 });

@@ -22,14 +22,14 @@ public class KataController implements UserApi {
 
     @Override
     public ResponseEntity<UserInformation> getUserInformation(Integer id) {
-        UserInformation userInformation = retrieveUserInformation();
+        UserInformation userInformation = retrieveUserInformationForId(id);
 
         return ResponseEntity.ok(userInformation);
     }
 
-    private UserInformation retrieveUserInformation() {
-        Mono<User> userMono = jsonPlaceHolderService.retrieveUser();
-        Mono<List<Post>> postsMono = jsonPlaceHolderService.retrievePostsForUser();
+    private UserInformation retrieveUserInformationForId(Integer id) {
+        Mono<User> userMono = jsonPlaceHolderService.retrieveUser(id);
+        Mono<List<Post>> postsMono = jsonPlaceHolderService.retrievePostsForUser(id);
         return Mono.zip(userMono, postsMono)
                 .map(responses -> UserInformationMapper.INSTANCE.mapUserAndPost(responses.getT1(), responses.getT2()))
                 .block();
